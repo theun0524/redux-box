@@ -38,7 +38,7 @@ function createStore(modules) {
 
 
   //Initialize middleware array
-  var sagaMiddleware = (0, _reduxSaga2.default)();
+  var sagaMiddleware = (0, _reduxSaga2.default)(config.sagaMiddlewareOptions);
   var middlewares = [sagaMiddleware];
 
   //push the provided middlewares in config object, to the middleware array
