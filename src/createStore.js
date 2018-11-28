@@ -18,7 +18,7 @@ we use these arrays to initialize the store using
 export default function createStore(modules, config = {}){
     
     //Initialize middleware array
-    const sagaMiddleware = createSagaMiddleware();
+    const sagaMiddleware = createSagaMiddleware(config.sagaMiddlewareOptions);
     let middlewares = [sagaMiddleware];
     
     //push the provided middlewares in config object, to the middleware array
